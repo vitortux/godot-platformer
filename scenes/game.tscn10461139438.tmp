@@ -281,32 +281,32 @@ position = Vector2(62, 128)
 position = Vector2(1, 45)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
-[node name="Coin" type="Node" parent="."]
+[node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(71, -8)
 
-[node name="Coin2" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin2" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(97, -8)
 
-[node name="Coin4" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin4" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(123, -8)
 
-[node name="Coin5" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin5" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(149, -8)
 
-[node name="Coin6" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin6" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(175, -8)
 
-[node name="Coin8" parent="Coin" instance=ExtResource("4_lbhrr")]
+[node name="Coin8" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(201, -8)
 
-[node name="Slime" type="Node" parent="."]
+[node name="Slimes" type="Node" parent="."]
 
-[node name="Slime" parent="Slime" instance=ExtResource("6_p57ef")]
+[node name="Slime" parent="Slimes" instance=ExtResource("6_p57ef")]
 position = Vector2(270, 36)
 
-[node name="Slime2" parent="Slime" instance=ExtResource("6_p57ef")]
+[node name="Slime2" parent="Slimes" instance=ExtResource("6_p57ef")]
 position = Vector2(-72, -12)
 
 [node name="Label" type="Label" parent="."]

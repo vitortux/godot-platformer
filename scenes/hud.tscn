@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgay0km5lkb6x"]
+
+[ext_resource type="FontFile" uid="uid://xtiswr6suwqp" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_ahhtf"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 241.0
+offset_bottom = 80.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_ahhtf")
+theme_override_font_sizes/font_size = 24
+text = "Moedas: 0"
