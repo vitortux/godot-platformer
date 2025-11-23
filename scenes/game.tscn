@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://crgo2qfi6b7a2" path="res://scenes/hud.gd" id="2_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bohoqad570yrq" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://d3l155agx5evp" path="res://scenes/platform.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" path="res://scenes/coin.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://f7nltq2ln4un" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dij8urf7sip4v" path="res://scenes/killzone.tscn" id="5_iywne"]
-[ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://b3c23yr58wxei" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://bv4mbthyww6je" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
