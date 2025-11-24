@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbo73clpre080" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dgay0km5lkb6x" path="res://scenes/hud.tscn" id="2_0tnpc"]
-[ext_resource type="Script" uid="uid://crgo2qfi6b7a2" path="res://scenes/hud.gd" id="2_vtaks"]
+[ext_resource type="Script" uid="uid://crgo2qfi6b7a2" path="res://scripts/hud.gd" id="2_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bohoqad570yrq" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://d3l155agx5evp" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://f7nltq2ln4un" path="res://scenes/coin.tscn" id="4_lbhrr"]
