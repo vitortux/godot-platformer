@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://crc31uedrrl02"]
+[gd_scene load_steps=17 format=4 uid="uid://crc31uedrrl02"]
 
 [ext_resource type="PackedScene" uid="uid://dbo73clpre080" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dgay0km5lkb6x" path="res://scenes/hud.tscn" id="2_0tnpc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dij8urf7sip4v" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b3c23yr58wxei" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://bv4mbthyww6je" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cn551ypjmqa6u" path="res://scenes/sapo.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -317,3 +318,6 @@ offset_bottom = -21.0
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Kiwoleto is real"
+
+[node name="Sapo" parent="." instance=ExtResource("10_vtaks")]
+position = Vector2(21, -8)

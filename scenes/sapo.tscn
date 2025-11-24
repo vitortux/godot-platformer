@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://cn551ypjmqa6u"]
+
+[ext_resource type="Texture2D" uid="uid://bxvepv7hw5h3n" path="res://assets/sprites/frog_spritesheets/frog_green_spritesheet.png" id="1_bggm8"]
+[ext_resource type="Script" uid="uid://b7x5el5ildmdt" path="res://scripts/sapo.gd" id="1_qp5ai"]
+[ext_resource type="AudioStream" uid="uid://ktbq6cq4uv2j" path="res://assets/sounds/frog_sfx.mp3" id="2_ix887"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5ai"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rpgi"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exqe4"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhhab"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rj5w"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1ptn"]
+atlas = ExtResource("1_bggm8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3l0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp5ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rpgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exqe4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhhab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rj5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1ptn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sapo" type="Area2D"]
+script = ExtResource("1_qp5ai")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x3l0o")
+autoplay = "default"
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ix887")
+bus = &"SFX"

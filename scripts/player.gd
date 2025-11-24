@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		coyote_timer -= delta
 
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and not is_dead:
 		if coyote_timer > 0:
 			velocity.y = JUMP_VELOCITY
 			animated_sprite.play("jump")
