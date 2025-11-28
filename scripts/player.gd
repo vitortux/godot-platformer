@@ -10,6 +10,7 @@ var current_state: PlayerState = PlayerState.IDLE
 @export var jump_velocity: int = -300
 @export var gravity: int = 980
 @export var down_gravity: float = 1.5
+@export var extra_jumps: int = 1
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_buffer: Timer = $JumpBuffer
@@ -41,7 +42,12 @@ func set_movement(delta: float) -> void:
 		current_state = PlayerState.JUMP
 		jump_buffer.stop()
 		coyote_timer.stop()
-	
+	elif jump_buffer.time_left > 0 and extra_jumps > 0:
+		velocity.y = jump_velocity
+		current_state = PlayerState.JUMP
+		jump_buffer.stop()
+		extra_jumps -= 1
+ 	
 	if current_state == PlayerState.JUMP:
 		velocity.y += gravity * delta
 	else:
@@ -75,6 +81,8 @@ func set_player_state() -> void:
 			current_state = PlayerState.DOWN
 		
 		PlayerState.DOWN when is_on_floor():
+			extra_jumps = 1
+			
 			if velocity.x == 0:
 				current_state = PlayerState.IDLE
 			else:
