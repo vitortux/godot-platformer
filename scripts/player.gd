@@ -4,13 +4,15 @@ enum PlayerState {
 	IDLE, RUN, JUMP, DOWN
 }
 
-var current_state: PlayerState = PlayerState.IDLE
 @export var speed: int = 130
 @export var acceleration: int = 20
 @export var jump_velocity: int = -300
 @export var gravity: int = 980
 @export var down_gravity: float = 1.5
 @export var extra_jumps: int = 1
+
+var current_state: PlayerState = PlayerState.IDLE 
+var extra_jump_count: int = 0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_buffer: Timer = $JumpBuffer
@@ -42,11 +44,12 @@ func set_movement(delta: float) -> void:
 		current_state = PlayerState.JUMP
 		jump_buffer.stop()
 		coyote_timer.stop()
-	elif jump_buffer.time_left > 0 and extra_jumps > 0:
+	elif jump_buffer.time_left > 0 and extra_jump_count < extra_jumps:
 		velocity.y = jump_velocity
 		current_state = PlayerState.JUMP
+		extra_jump_count += 1
 		jump_buffer.stop()
-		extra_jumps -= 1
+
  	
 	if current_state == PlayerState.JUMP:
 		velocity.y += gravity * delta
@@ -81,7 +84,7 @@ func set_player_state() -> void:
 			current_state = PlayerState.DOWN
 		
 		PlayerState.DOWN when is_on_floor():
-			extra_jumps = 1
+			extra_jump_count = 0
 			
 			if velocity.x == 0:
 				current_state = PlayerState.IDLE
